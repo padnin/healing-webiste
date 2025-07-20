@@ -4,421 +4,419 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Healing Through Breath</title>
+    <title>Feel to Heal</title>
     <style>
         body {
             margin: 0;
             font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
-            background-image: url('https://images.unsplash.com/photo-1602615576820-ea14cf3e476a?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
-            color: #2c2c2c;
         }
 
-        header {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 1.5rem;
-            text-align: center;
-            font-size: 2rem;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        nav {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 1rem;
+        .top-bar {
             display: flex;
-            justify-content: center;
-            gap: 2rem;
-            font-size: 1rem;
-            font-weight: 500;
+            justify-content: space-between;
+            align-items: flex-start;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
 
-        nav a {
-            text-decoration: none;
-            color: #444;
-            white-space: nowrap;
+        .brand-left .logo {
+            height: 180px;
+            /* Medium size */
+            width: auto;
         }
 
-        section {
-            background-color: rgba(255, 255, 255, 0.88);
-            margin: 2rem auto;
-            max-width: 800px;
-            border-radius: 10px;
-            padding: 2rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        .top-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
+            margin-top: 0.5rem;
         }
 
-        .section-img {
-            width: 100%;
-            max-height: 300px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 12px rgba(75, 58, 114, 0.15);
+        .top-contact span {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 6px;
         }
 
-        section h1 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        section p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-
-        footer {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 2rem;
-            text-align: center;
-            font-size: 1rem;
-        }
-
-        #contact {
-            background-color: rgba(255, 255, 255, 0.95);
-            padding: 2rem;
-            border-radius: 12px;
-            margin-top: 4rem;
-        }
-
-        #contact h2 {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-        }
-
-        #contact form input,
-        #contact form textarea {
-            width: 100%;
-            padding: 0.8rem;
-            margin: 0.5rem 0;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-        }
-
-        #contact form button {
-            padding: 0.8rem 2rem;
-            background-color: #715AFF;
+        .register-btn {
+            background-color: #f48fb1;
             color: white;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1rem;
+            padding: 6px 12px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .top-contact {
+                align-items: center;
+                text-align: center;
+                margin-top: 1rem;
+            }
+
+            .brand-left .logo {
+                height: 60px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <section id="hero"
-        style="background-color: rgba(255, 255, 255, 0.85); padding: 3rem 1.5rem; text-align: center; font-family: 'Palatino Linotype', serif;">
-        <div style="max-width: 900px; margin: auto;">
-            <h1>🌿 Feel, Transform and Heal</h1>
-            <p class="tagline" style="font-style: italic; font-weight: 600;">Feel to Heal</p>
-            <!-- <p>
-                A sacred space where emotional awareness meets ancient energy healing and modern science.
-                I help you gently uncover your emotional wounds and transform them using a powerful blend of:
-            </p> -->
 
-            <!-- Navigation Bar -->
-            <nav style="
-      background-color: rgba(255, 255, 255, 0.95);
-      padding: 1rem 2rem;
-      margin: 2rem 0;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      display: flex;
-      justify-content: center;
-      gap: 2.5rem;
-      font-weight: 600;
-      font-size: 1.1rem;
-    ">
-                <a href="#chakra" style="text-decoration:none; color:#444;">✨ Chakra & Pranic Healing</a>
-                <a href="#breathing" style="text-decoration:none; color:#444;">🌀 Breathwork & Somatic Therapy</a>
-                <a href="#inner-child" style="text-decoration:none; color:#444;">💫 Inner Child Healing & Art
-                    Therapy</a>
-                <a href="#nlp" style="text-decoration:none; color:#444;">🧠 NLP, Timeline Therapy & Positive
-                    Psychology</a>
-            </nav>
-
-            <section id="fth-model" class="bg-white py-16 px-6 md:px-12 text-gray-800">
-                <div class="max-w-5xl mx-auto text-center">
-                    <h2 class="text-4xl font-bold text-green-700 mb-6">🌿 The F.T.H. Model – Feel. Transform. Heal.</h2>
-
-                    <p class="text-xl italic text-green-900 mb-10">
-                        Feel the emotions. Transform the pain. Heal your soul.
-                    </p>
-                    <!-- Feel -->
-                    <div class="mb-10">
-                        <h3 class="text-2xl font-semibold text-purple-700 mb-2">Feel</h3>
-                        <p class="text-lg mb-2">
-                            Gently connect with your inner world. Allow yourself to become aware of buried emotions,
-                            unmet needs,
-                            and energetic imbalances.
-                            Just like tuning into the whispers of your soul, this is the sacred beginning of
-                            self-awareness.
-                        </p>
-                        <blockquote class="italic text-gray-600">🌊 "To feel is to open the doorway to healing."
-                        </blockquote>
-                    </div>
-
-                    <!-- Transform -->
-                    <div class="mb-10">
-                        <h3 class="text-2xl font-semibold text-red-600 mb-2">Transform</h3>
-                        <p class="text-lg mb-2">
-                            Engage in deep, integrative practices — from chakra alignment to somatic breathwork, inner
-                            child
-                            healing, NLP and art therapy.
-                            Here, your emotional energy becomes alchemical fuel for growth, insight, and strength.
-                        </p>
-                        <blockquote class="italic text-gray-600">🔥 "Transformation begins when emotion becomes motion."
-                        </blockquote>
-                    </div>
-
-                    <!-- Heal -->
-                    <div>
-                        <h3 class="text-2xl font-semibold text-blue-600 mb-2">Heal</h3>
-                        <p class="text-lg mb-2">
-                            Return to wholeness with compassion. Experience peace, clarity, and freedom as old patterns
-                            dissolve.
-                            Your nervous system resets, your spirit realigns, and your life reclaims its natural flow.
-                        </p>
-                        <blockquote class="italic text-gray-600">🌈 "Healing is not fixing — it’s remembering who you
-                            truly are."
-                        </blockquote>
-                    </div>
-                </div>
-            </section>
-
-            <ul style="list-style: none; padding: 0; margin: 2rem 0; font-size: 1.1rem; color: #333;">
-                <li>✨ Chakra & Pranic Healing</li>
-                <li>🌀 Breathwork & Somatic Therapy</li>
-                <li>💫 Inner Child Healing & Art Therapy</li>
-                <li>🧠 Mindser Rewiring: NLP, Timeline Therapy & Positive Psychology</li>
-            </ul>
-
-            <p style="font-size: 1.1rem; color: #444; margin-bottom: 2rem;">
-                Whether you're guided by spirit or prefer science-backed transformation, this space is for you.
-            </p>
-
-            <h2 style="font-size: 1.5rem; font-weight: bold; color: #4a4a4a;">
-            </h2>
-
-            <div style="margin-top: 2.5rem; text-align: left; font-size: 1.1rem; color: #333;">
-                <h3 style="font-size: 1.4rem; margin-bottom: 1rem;">What I Offer</h3>
-                <ul style="padding-left: 1rem;">
-                    <li>→ <strong>1:1 Healing Sessions</strong><br>
-                        <small>For those seeking personalized emotional + energy healing (Available online & in
-                            person)</small>
-                    </li><br>
-                    <li>→ <strong>Signature Program: “Emotional Balance Journey”</strong><br>
-                        <small>An 8-week journey to transform emotions into self-trust & inner peace</small>
-                    </li><br>
-                    <li>→ <strong>Chakra Healing & Energy Alignment</strong><br>
-                        <small>Pranic Healing (Levels 1 & 2), color therapy & guided visualizations</small>
-                    </li><br>
-                    <li>→ <strong>Breath & Body Integration</strong><br>
-                        <small>Breath coaching and somatic practices to release stored emotions</small>
-                    </li><br>
-                    <li>→ <strong>Science Meets Soul Sessions</strong><br>
-                        <small>Tools like NLP, TLT, and Positive Psychology to ground healing in neuroscience</small>
-                    </li>
-                </ul>
-            </div>
+    <header class="top-bar">
+        <div class="brand-left">
+            <img src="images/feel-to-heal.png" alt="Feel to Heal logo" class="logo" />
         </div>
-    </section>
-
-    <!-- <header>Healing Through Breath, Meditation & Energy</header>
-
-    <nav>
-        <a href="#chakra-meditation">✨ Chakra & Pranic Healing</a>
-        <a href="#breathing">🌀 Breathwork & Somatic Therapy</a>
-        <a href="#inner-child">💫 Inner Child Healing & Art Therapy</a>
-        <a href="#nlp">🧠 NLP, Timeline Therapy & Positive Psychology</a>
-    </nav> -->
-
-    <section id="about"
-        style="background-color: rgba(255, 255, 255, 0.9); padding: 3rem 2rem; border-radius: 12px; max-width: 800px; margin: 3rem auto; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); text-align: center;">
-        <h1 style="font-size: 2rem; margin-bottom: 1.5rem;">About Me</h1>
-
-        <img src="my-photo.jpg" alt="My photo"
-            style="width: 150px; border-radius: 50%; margin-bottom: 1rem; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);" />
-
-        <p style="font-size: 1.2rem; line-height: 1.6; color: #333;">
-            I'm a certified breathwork and energy healing facilitator, passionate about guiding others back to their
-            calm,
-            clarity, and inner strength. Through a blend of conscious breathing, meditation, and emotional healing
-            tools,
-            I help you reconnect with your essence and release what holds you back. Your healing begins the moment you
-            return to your breath.
-        </p>
-    </section>
-    <section id="breathing"
-        style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 2rem;">
-        <div style="flex: 1;">
-            <h1>Breathwork & Somatic Therapy</h1>
-            <p>
-                Breath is your anchor to the present moment. Each inhale fuels your life force.
-                Each exhale releases what no longer serves you.
-                In our fast-paced world, our breath becomes shallow, tight, and disconnected — mirroring the stress we
-                carry in our bodies and minds. <strong>Breathwork Healing</strong> is a deeply transformative practice
-                rooted both in ancient wisdom and modern science. It’s more than just “deep breathing” — it’s about
-                using
-                intentional breath patterns to regulate your nervous system, release stored trauma, and restore your
-                natural state of calm and clarity.
-            </p>
-            <p>
-                Through guided breathwork, you’ll learn to activate your parasympathetic nervous system (the "rest and
-                digest" state), reduce cortisol (stress hormone), and engage the brain’s prefrontal cortex — responsible
-                for clarity, focus, and emotional regulation.
-            </p>
-            <p>
-                Whether you're experiencing anxiety, burnout, or simply feel disconnected, this practice will gently
-                guide
-                you back to the wisdom of your body — and the stillness that’s always been within you.
-            </p>
+        <div class="top-contact">
+            <span>Join my free sessions</span>
+            <a href="#register" class="register-btn">Register Here</a>
         </div>
-        <div style="flex: 0 0 150px;">
-            <img src="https://images.pexels.com/photos/13865962/pexels-photo-13865962.jpeg"
-                style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px;" />
-        </div>
-    </section>
-
-    <section id="energy"
-        style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 2rem;">
-        <div style="flex: 1;">
-            <h1>Chakra & Pranic Healing</h1>
-            <p>
-                Your body is more than muscles and bones — it’s an energetic system, constantly moving, feeling,
-                responding.
-                When this energy flows freely, you feel vibrant, grounded, and clear. But when it's blocked, you might
-                feel
-                stuck, anxious, or fatigued.
-            </p>
-            <p>
-                In Chakra & Pranic Healing, we work with your body’s seven major energy centers to cleanse, balance, and
-                recharge them using ancient energy science and color prana. This isn’t just “spiritual” — it’s a deeply
-                precise and intuitive modality that clears stagnant energy, restores emotional equilibrium, and
-                reconnects
-                you to your natural vitality.
-            </p>
-            <p>
-                Whether you're holding unprocessed grief, emotional heaviness, or just feel energetically "off," these
-                sessions help realign your inner systems — gently and effectively.
-            </p>
-        </div>
-        <div style="flex: 0 0 150px;">
-            <img src="https://t3.ftcdn.net/jpg/07/34/51/56/240_F_734515616_N4ChHfLgVSlVJM7A2kSLQcmtUWHVK6PK.jpg"
-                alt="Energy Healing" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px;" />
-        </div>
-    </section>
-
-    <section id="inner-child">
-        <img class="section-img"
-            src="https://images.unsplash.com/photo-1620515662109-9b3942dcfdbb?auto=format&fit=crop&w=1080&q=80"
-            alt="Inner Child Healing">
-        <h1>Inner Child Healing & Art Therapy</h1>
-        <p>
-            Inside each of us lives a younger self — holding memories, unmet needs, joy, fear, wonder, and pain. These
-            early imprints shape how we love, how we trust, how we see ourselves — often without us even realizing it.
-        </p>
-        <p>
-            Inner Child Healing invites you to gently reconnect with this part of you. It's a space to listen deeply, to
-            offer the love and validation you may have never received, and to rewrite old emotional patterns with
-            compassion. Through creative exercises and somatic awareness, you'll begin to give voice to what was
-            silenced
-            and reclaim the innocence and strength that’s always been yours.
-        </p>
-        <p>
-            🌱 This isn’t about dwelling on the past. It’s about creating safety in your present so the parts of you
-            that
-            learned to hide or fight can begin to soften, trust, and bloom.
-        </p>
-        <p>
-            Join me for upcoming <strong>Inner Child Awareness Workshops</strong> — safe, nurturing spaces where healing
-            is artful, embodied, and profoundly freeing.
-        </p>
-    </section>
-
-    <section id="nlp"
-        style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 2rem;">
-        <div style="flex: 1;">
-            <h1>Mindset Rewiring: NLP, Timeline Therapy & Positive Psychology</h1>
-            <p>
-                Sometimes, healing doesn’t come from diving into the past — but from changing how the past lives in you.
-            </p>
-            <p>
-                With tools like NLP (Neuro-Linguistic Programming), Timeline Therapy, and Positive Psychology, we
-                explore
-                how your thoughts, language, and emotional patterns shape your experience. These modalities help you
-                identify limiting beliefs, reframe inner narratives, and install new emotional strategies — grounded in
-                both
-                neuroscience and ancient wisdom.
-            </p>
-            <p>
-                You don’t have to stay stuck in old loops. These sessions are practical, empowering, and transformative
-                —
-                giving you the tools to lead from clarity, self-trust, and emotional freedom.
-            </p>
-        </div>
-        <div style="flex: 0 0 150px;">
-            <img src="https://makingyouhealthier.com/wp-content/uploads/2024/06/brain_thought_1717685378.png" alt="NLP"
-                style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px;" />
-        </div>
-    </section>
-
-    <section id="contact" style="padding: 60px 20px; background-color: #f9f9f9;">
-        <div style="max-width: 600px; margin: auto;">
-            <h2 style="text-align: center; font-size: 2em; margin-bottom: 20px;">Let's Connect</h2>
-            <p style="text-align: center; font-size: 1.1em; color: #555;">
-                I’d love to hear from you — whether you have a question, want to book a session, or just feel
-                called to
-                share something.
-            </p>
-
-            <form action="https://formspree.io/f/xeokqqnj" method="POST" style="margin-top: 30px;">
-                <label for="name" style="display: block; margin-bottom: 5px;">Your Name</label>
-                <input type="text" name="name" id="name" placeholder="Jane Doe" required
-                    style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px;" />
-
-                <label for="email" style="display: block; margin-bottom: 5px;">Your Email</label>
-                <input type="email" name="email" id="email" placeholder="jane@example.com" required
-                    style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px;" />
-
-                <label for="message" style="display: block; margin-bottom: 5px;">Your Message</label>
-                <textarea name="message" id="message" rows="5" placeholder="I'd love to connect because..." required
-                    style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px;"></textarea>
-
-                <button type="submit"
-                    style="width: 100%; padding: 12px; background-color: #0077cc; color: white; border: none; border-radius: 6px; font-size: 1em; cursor: pointer;">
-                    Send Message
-                </button>
-            </form>
-        </div>
-    </section>
-
-
-
-    <!-- Disclaimer Section -->
-    <section id="disclaimer" style="padding: 1rem; background-color: #f9f9f9; text-align: center;">
-        <small>
-            <strong>Disclaimer:</strong> The content provided in this workshop, including breathing practices,
-            meditations,
-            and related techniques, is for educational and informational purposes only. It is not intended as a
-            substitute
-            for professional medical advice, diagnosis, or treatment. Always consult your healthcare provider
-            before
-            starting any new wellness or breathwork practice. Participation is voluntary and at your own risk.
-        </small>
-    </section>
-
-    <footer>
-        &copy; 2025 Healing Through Breath. All rights reserved.
-    </footer>
+    </header>
 
 </body>
 
-<body>
+</html>
 
+
+
+<section id="hero"
+    style="background-color: rgba(255, 255, 255, 0.85); padding: 3rem 1.5rem; text-align: center; font-family: 'Palatino Linotype', serif;">
+    <div style="max-width: 900px; margin: auto;">
+        <h1> Feel, Transform and Heal</h1>
+        <p class="tagline" style="font-style: italic; font-weight: 600;">Feel to Heal</p>
+
+
+
+        <section id="fth-model" class="py-16 px-6 md:px-12 text-gray-800"
+            style="background: linear-gradient(135deg, #ffe5b4 0%, #f3e8ff 100%);">
+            <div class="max-w-5xl mx-auto text-center">
+                <h2 class="text-4xl font-bold text-green-700 mb-6"> The F.T.H. Model – Feel. Transform. Heal.</h2>
+
+                <p class="text-xl italic text-green-900 mb-10">
+                    Feel the emotions. Transform the pain. Heal your soul.
+                </p>
+
+                <!-- Feel -->
+                <div class="mb-10 bg-white bg-opacity-80 rounded-xl p-6 shadow-md">
+                    <h3 class="text-2xl font-semibold text-purple-700 mb-2">Feel</h3>
+                    <p class="text-lg mb-2">
+                        Gently connect with your inner world. Allow yourself to become aware of buried emotions,
+                        unmet needs, and energetic imbalances.
+                        Just like tuning into the whispers of your soul, this is the sacred beginning of
+                        self-awareness.
+                    </p>
+                    <blockquote class="italic text-gray-600">🌊 "To feel is to open the doorway to healing."
+                    </blockquote>
+                </div>
+
+                <!-- Transform -->
+                <div class="mb-10 bg-white bg-opacity-80 rounded-xl p-6 shadow-md">
+                    <h3 class="text-2xl font-semibold text-red-600 mb-2">Transform</h3>
+                    <p class="text-lg mb-2">
+                        Engage in deep, integrative practices — from chakra alignment to somatic breathwork, inner
+                        child
+                        healing, NLP and art therapy.
+                        Here, your emotional energy becomes alchemical fuel for growth, insight, and strength.
+                    </p>
+                    <blockquote class="italic text-gray-600">🔥 "Transformation begins when emotion becomes motion."
+                    </blockquote>
+                </div>
+
+                <!-- Heal -->
+                <div class="bg-white bg-opacity-80 rounded-xl p-6 shadow-md">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-2">Heal</h3>
+                    <p class="text-lg mb-2">
+                        Return to wholeness with compassion. Experience peace, clarity, and freedom as old patterns
+                        dissolve.
+                        Your nervous system resets, your spirit realigns, and your life reclaims its natural flow.
+                    </p>
+                    <blockquote class="italic text-gray-600">🌈 "Healing is not fixing — it’s remembering who you
+                        truly are."
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+        <!-- <ul
+            style="list-style: none; padding: 0; margin: 2rem 0; max-width: 600px; margin-left: auto; margin-right: auto; display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+            <li
+                style="flex: 1 1 45%; background: #f3e8ff; color: #6a4ca6; padding: 1rem 1.2rem; border-radius: 12px; box-shadow: 0 2px 6px rgba(106, 76, 166, 0.15); text-align: center; font-weight: 600;">
+                ✨ Chakra & Pranic Healing
+            </li>
+            <li
+                style="flex: 1 1 45%; background: #e3f2fd; color: #31708f; padding: 1rem 1.2rem; border-radius: 12px; box-shadow: 0 2px 6px rgba(49, 112, 143, 0.15); text-align: center; font-weight: 600;">
+                🌀 Breathwork & Somatic Therapy
+            </li>
+            <li
+                style="flex: 1 1 45%; background: #fff0f5; color: #a05a6a; padding: 1rem 1.2rem; border-radius: 12px; box-shadow: 0 2px 6px rgba(160, 90, 106, 0.15); text-align: center; font-weight: 600;">
+                💫 Inner Child Healing & Art Therapy
+            </li>
+            <li
+                style="flex: 1 1 45%; background: #e6f4ea; color: #4a7c50; padding: 1rem 1.2rem; border-radius: 12px; box-shadow: 0 2px 6px rgba(74, 124, 80, 0.15); text-align: center; font-weight: 600;">
+                🧠 Mindset Rewiring: NLP, Timeline Therapy & Positive Psychology
+            </li>
+        </ul>
+
+        <p style="max-width: 600px; margin: 2rem auto 0 auto; font-size: 1.1rem; color: #555; text-align: center;">
+            Whether you're guided by spirit or prefer science-backed transformation, this space is for you.
+        </p> -->
+
+
+        <!-- What I Offer Section -->
+        <div style="max-width: 700px; margin: 2rem auto; font-family: 'Palatino Linotype', serif;">
+            <h3 style="font-size: 1.6rem; margin-bottom: 1rem; text-align: center; color: #6a4ca6;">What I Offer</h3>
+
+            <div
+                style="background: #f3e8ff; padding: 1rem 1.5rem; border-radius: 12px; margin-bottom: 1rem; box-shadow: 0 2px 6px rgba(106, 76, 166, 0.15);">
+                <strong>→ 1:1 Healing Sessions</strong><br>
+                <small>Personalized emotional + energy healing (Available online & in person)</small>
+            </div>
+
+            <div
+                style="background: #fff9f2; padding: 1rem 1.5rem; border-radius: 12px; margin-bottom: 1rem; box-shadow: 0 2px 6px rgba(255, 179, 128, 0.15);">
+                <strong>→ Chakra & Color Prana Healing</strong><br>
+                <small>Pranic Healing, color therapy & guided visualizations</small>
+            </div>
+
+            <div
+                style="background: #f3e8ff; padding: 1rem 1.5rem; border-radius: 12px; margin-bottom: 1rem; box-shadow: 0 2px 6px rgba(106, 76, 166, 0.15);">
+                <strong>→ Breathwork & Somatic Therapy</strong><br>
+                <small>Breath coaching and body-based emotional release practices</small>
+            </div>
+
+            <div
+                style="background: #fff9f2; padding: 1rem 1.5rem; border-radius: 12px; box-shadow: 0 2px 6px rgba(255, 179, 128, 0.15);">
+                <strong>→ Mindset Rewiring & NLP</strong><br>
+                <small>Tools like NLP, Timeline Therapy & Positive Psychology to reframe emotional patterns</small>
+            </div>
+        </div>
+
+        <!-- Signature Programs Section -->
+        <h2 style="color: #6b4f85; font-size: 1.6rem; margin-bottom: 1rem;">Signature Programs</h2>
+        <ul
+            style="list-style: none; padding-left: 0; font-size: 1.15rem; line-height: 1.6; text-align: left; max-width: 500px; margin: auto;">
+            <li>• <strong>Emotional Balance Journey:</strong> An 8-week transformational program combining breathwork,
+                NLP, and
+                energy healing to release emotional blocks and cultivate inner calm.</li>
+            <li>• <strong>Inner Child Awakening Workshop:</strong> Creative and somatic healing sessions designed to
+                reconnect,
+                nurture, and heal the inner child through art therapy and compassionate exploration.</li>
+            <li>• <strong>Chakra & Prana Alignment Series:</strong> Multi-level energy healing courses focused on chakra
+                balancing with color prana techniques for revitalizing mind and body.</li>
+            <li>• <strong>Science Meets Spirit Coaching:</strong> Personalized coaching blending neuroscience-based
+                methods with
+                spiritual practices for holistic growth and emotional mastery.</li>
+        </ul>
+
+        <section id="about"
+            style="background: linear-gradient(to right, rgba(221, 236, 221, 0.6), rgba(235, 224, 245, 0.7)); padding: 3rem 2rem; border-radius: 12px; max-width: 800px; margin: 3rem auto; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); text-align: center; font-family: 'Segoe UI', sans-serif;">
+
+            <h1 style="font-size: 2rem; margin-bottom: 1.5rem; color: #5C5470;">About Me</h1>
+
+            <img src="my-photo.jpg" alt="My photo"
+                style="width: 150px; border-radius: 50%; margin-bottom: 1rem; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);" />
+
+            <p style="font-size: 1.2rem; line-height: 1.7; color: #333;">
+                I believe healing is remembering who we truly are.
+                <br><br>
+                My own path has taken me through deep emotional work, spiritual exploration, and science-backed
+                practices that
+                help us return to wholeness. I hold a space that blends breath, energy, creativity, and
+                compassionate listening
+                — whether you're guided by spirit or need grounded steps.
+                <br><br>
+                I'm here to walk beside you — through the stuckness, the numbness, the longing — and help you
+                reconnect with the
+                parts of you that were silenced, forgotten, or hidden. Together, we breathe, feel, and heal.
+                <br><br>
+                This is a space where your emotions are welcomed, your truth is honored, and your healing becomes a
+                sacred
+                journey inward.
+            </p>
+        </section>
+
+
+        <h2 style="color: #4a7c59; font-size: 1.6rem; margin-top: 2rem; margin-bottom: 1rem;">My Main Focus</h2>
+        <p style="font-size: 1.15rem; line-height: 1.6; margin-bottom: 2rem;">
+            My core mission is to help people become deeply aware of their emotions and guide them to heal and
+            transform
+            through breathwork, energy healing, inner child work, and mind rewiring techniques. I empower
+            clients to
+            reconnect with their authentic selves and cultivate lasting emotional balance, resilience, and
+            peace.
+        </p>
+
+        <!-- <h2 style="color: #6b4f85; font-size: 1.6rem; margin-bottom: 1rem;">Signature Programs</h2>
+        <ul
+            style="list-style: none; padding-left: 0; font-size: 1.15rem; line-height: 1.6; text-align: left; max-width: 500px; margin: auto;">
+            <li>• <strong>Emotional Balance Journey:</strong> An 8-week transformational program combining
+                breathwork, NLP,
+                and energy healing to release emotional blocks and cultivate inner calm.</li>
+            <li>• <strong>Inner Child Awakening Workshop:</strong> Creative and somatic healing sessions
+                designed to
+                reconnect, nurture, and heal the inner child through art therapy and compassionate exploration.
+            </li>
+            <li>• <strong>Chakra & Prana Alignment Series:</strong> Multi-level energy healing courses focused
+                on chakra
+                balancing with color prana techniques for revitalizing mind and body.</li>
+            <li>• <strong>Science Meets Spirit Coaching:</strong> Personalized coaching blending
+                neuroscience-based methods
+                with spiritual practices for holistic growth and emotional mastery.</li>
+        </ul> -->
+
+</section>
+
+
+<div
+    style="max-width: 800px; margin: 2rem auto; font-family: 'Palatino Linotype', serif; font-size: 0.9rem; line-height: 1.5; color: #333;">
+
+    <div
+        style="background: #f3e8ff; padding: 1rem 1.5rem; border-radius: 12px; margin-bottom: 1rem; box-shadow: 0 2px 6px rgba(106, 76, 166, 0.15);">
+        <strong>Breathwork &amp; Somatic Therapy</strong><br><br>
+        Breath is your anchor to the present moment. Each inhale fuels your life force. Each exhale releases
+        what no
+        longer serves you. In our fast-paced world, our breath becomes shallow, tight, and disconnected —
+        mirroring the
+        stress we carry in our bodies and minds. Breathwork Healing is a deeply transformative practice
+        rooted both in
+        ancient wisdom and modern science. It’s more than just “deep breathing” — it’s about using
+        intentional breath
+        patterns to regulate your nervous system, release stored trauma, and restore your natural state of
+        calm and
+        clarity.<br><br>
+        Through guided breathwork, you’ll learn to activate your parasympathetic nervous system (the "rest
+        and digest"
+        state), reduce cortisol (stress hormone), and engage the brain’s prefrontal cortex — responsible for
+        clarity,
+        focus, and emotional regulation.<br><br>
+        Whether you're experiencing anxiety, burnout, or simply feel disconnected, this practice will gently
+        guide you
+        back to the wisdom of your body — and the stillness that’s always been within you.
+    </div>
+
+    <div
+        style="background: #fff9f2; padding: 1rem 1.5rem; border-radius: 12px; margin-bottom: 1rem; box-shadow: 0 2px 6px rgba(255, 179, 128, 0.15);">
+        <strong>Chakra &amp; Pranic Healing</strong><br><br>
+        Your body is more than muscles and bones — it’s an energetic system, constantly moving, feeling,
+        responding.
+        When this energy flows freely, you feel vibrant, grounded, and clear. But when it's blocked, you
+        might feel
+        stuck, anxious, or fatigued.<br><br>
+        In Chakra & Pranic Healing, we work with your body’s seven major energy centers to cleanse, balance,
+        and
+        recharge them using ancient energy science and color prana. This isn’t just “spiritual” — it’s a
+        deeply precise
+        and intuitive modality that clears stagnant energy, restores emotional equilibrium, and reconnects
+        you to your
+        natural vitality.<br><br>
+        Whether you're holding unprocessed grief, emotional heaviness, or just feel energetically "off,"
+        these sessions
+        help realign your inner systems — gently and effectively.
+    </div>
+
+    <div
+        style="background: #f3e8ff; padding: 1rem 1.5rem; border-radius: 12px; margin-bottom: 1rem; box-shadow: 0 2px 6px rgba(106, 76, 166, 0.15);">
+        <strong>Inner Child Healing &amp; Art Therapy</strong><br><br>
+        Inside each of us lives a younger self — holding memories, unmet needs, joy, fear, wonder, and pain.
+        These early
+        imprints shape how we love, how we trust, how we see ourselves — often without us even realizing
+        it.<br><br>
+        Inner Child Healing invites you to gently reconnect with this part of you. It's a space to listen
+        deeply, to
+        offer the love and validation you may have never received, and to rewrite old emotional patterns
+        with
+        compassion. Through creative exercises and somatic awareness, you'll begin to give voice to what was
+        silenced
+        and reclaim the innocence and strength that’s always been yours.<br><br>
+        🌱 This isn’t about dwelling on the past. It’s about creating safety in your present so the parts of
+        you that
+        learned to hide or fight can begin to soften, trust, and bloom.<br><br>
+        Join me for upcoming Inner Child Awareness Workshops — safe, nurturing spaces where healing is
+        artful, embodied,
+        and profoundly freeing.
+    </div>
+
+    <div
+        style="background: #fff9f2; padding: 1rem 1.5rem; border-radius: 12px; box-shadow: 0 2px 6px rgba(255, 179, 128, 0.15);">
+        <strong>Mindset Rewiring: NLP, Timeline Therapy &amp; Positive Psychology</strong><br><br>
+        Sometimes, healing doesn’t come from diving into the past — but from changing how the past lives in
+        you.<br><br>
+        With tools like NLP (Neuro-Linguistic Programming), Timeline Therapy, and Positive Psychology, we
+        explore how
+        your thoughts, language, and emotional patterns shape your experience. These modalities help you
+        identify
+        limiting beliefs, reframe inner narratives, and install new emotional strategies — grounded in both
+        neuroscience
+        and ancient wisdom.<br><br>
+        You don’t have to stay stuck in old loops. These sessions are practical, empowering, and
+        transformative — giving
+        you the tools to lead from clarity, self-trust, and emotional freedom.
+    </div>
+
+</div>
+
+
+<section id="contact"
+    style="padding: 60px 20px; background: linear-gradient(135deg, #e6f0ff 0%, #f7e8ff 100%); border-radius: 12px; box-shadow: 0 4px 10px rgba(150, 150, 200, 0.15);">
+    <div style="max-width: 600px; margin: auto;">
+        <h2 style="text-align: center; font-size: 2em; margin-bottom: 20px; color: #5a4d8b;">Let's Connect
+        </h2>
+        <p style="text-align: center; font-size: 1.1em; color: #555;">
+            I’d love to hear from you — whether you have a question, want to book a session, or just feel
+            called to
+            share something.
+        </p>
+
+        <form action="https://formspree.io/f/xeokqqnj" method="POST" style="margin-top: 30px;">
+            <label for="name" style="display: block; margin-bottom: 5px; color: #5a4d8b;">Your Name</label>
+            <input type="text" name="name" id="name" placeholder="Jane Doe" required
+                style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #bfbfdc; border-radius: 6px;" />
+
+            <label for="email" style="display: block; margin-bottom: 5px; color: #5a4d8b;">Your
+                Email</label>
+            <input type="email" name="email" id="email" placeholder="jane@example.com" required
+                style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #bfbfdc; border-radius: 6px;" />
+
+            <label for="message" style="display: block; margin-bottom: 5px; color: #5a4d8b;">Your
+                Message</label>
+            <textarea name="message" id="message" rows="5" placeholder="I'd love to connect because..." required
+                style="width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #bfbfdc; border-radius: 6px;"></textarea>
+
+            <button type="submit"
+                style="width: 100%; padding: 12px; background-color: #7b6dc3; color: white; border: none; border-radius: 6px; font-size: 1em; cursor: pointer;">
+                Send Message
+            </button>
+        </form>
+    </div>
+</section>
+
+
+<!-- Disclaimer Section -->
+<section id="disclaimer"
+    style="padding: 1rem; background-color: #fff4e6; text-align: center; color: #6a4ca6; border-radius: 8px; margin: 2rem auto; max-width: 800px; font-family: 'Palatino Linotype', serif;">
+    <small>
+        <strong>Disclaimer:</strong> The content provided in this workshop, including breathing practices,
+        meditations,
+        and related techniques, is for educational and informational purposes only. It is not intended as a
+        substitute
+        for professional medical advice, diagnosis, or treatment. Always consult your healthcare provider
+        before
+        starting any new wellness or breathwork practice. Participation is voluntary and at your own risk.
+    </small>
+</section>
+
+<footer
+    style="background-color: #e6e0ff; padding: 1.5rem; text-align: center; color: #4a3fa1; font-family: 'Palatino Linotype', serif; font-size: 1rem; border-radius: 8px;">
+    &copy; 2025 Healing Through Breath. All rights reserved.
+</footer>
+
+</body>
 
 </html>
